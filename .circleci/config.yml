@@ -32,9 +32,6 @@ workflows:
     jobs:
       - deploy:
           filters:
-            # ignore any commit on any branch by default
-            branches:
-              ignore: /.*/
             # only act on version tags
             tags:
               only: /v[0-9]+(\.[0-9]+)*(\-rc(\.[0-9]+)?)?/
