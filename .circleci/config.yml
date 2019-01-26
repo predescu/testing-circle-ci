@@ -32,6 +32,9 @@ workflows:
     jobs:
       - build:
           filters:
+            # ignore any commit on any branch by default
+            branches:
+              ignore: /.*/
             # only act on version tags
             tags:
               only: /^v\d+\.\d+\.\d+$/
