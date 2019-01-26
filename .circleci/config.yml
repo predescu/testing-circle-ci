@@ -37,4 +37,4 @@ workflows:
               ignore: /.*/
             # only act on version tags
             tags:
-              only: /^v\d+\.\d+\.\d+$/
+              only: /v[0-9]+(\.[0-9]+)*(\-rc(\.[0-9]+)?)?/
