@@ -11,6 +11,12 @@ jobs:
       - run:
           name: Print the Current Time
           command: date
+  deploy:
+    steps:
+      - checkout
+      - run:
+          name: Deploy
+          command: echo Hello, world.
 workflows:
   version: 2
   push_master:
@@ -30,3 +36,13 @@ workflows:
             # only act on version tags
             tags:
               only: /^v\d+\.\d+\.\d+$/
+      - deploy:
+          filters:
+            # ignore any commit on any branch by default
+            branches:
+              ignore: /.*/
+            # only act on version tags
+            tags:
+              only: /^v\d+\.\d+\.\d+$/
+          requires:
+            - build
