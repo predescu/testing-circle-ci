@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="1.1.9"></a>
+## [1.1.9](https://github.com/predescu/testing-circle-ci/compare/v1.1.8...v1.1.9) (2019-01-26)
+
+
+### Bug Fixes
+
+* deploy step 2 ([4e15a11](https://github.com/predescu/testing-circle-ci/commit/4e15a11))
+* deploy step 2 ([8ff02b7](https://github.com/predescu/testing-circle-ci/commit/8ff02b7))
+
+
+
 <a name="1.1.8"></a>
 ## [1.1.8](https://github.com/predescu/testing-circle-ci/compare/v1.1.7...v1.1.8) (2019-01-26)
 
