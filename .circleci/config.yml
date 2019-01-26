@@ -11,6 +11,14 @@ jobs:
       - run:
           name: Print the Current Time
           command: date
+  test:
+    docker:
+      - image: debian:stretch
+    steps:
+      - checkout
+      - run:
+          name: Testing
+          command: echo Testing
   deploy:
     docker:
       - image: debian:stretch
@@ -21,22 +29,23 @@ jobs:
           command: echo Hello, world.
 workflows:
   version: 2
-  # This runs on non-tag pushes
-  untagged-build:
-    jobs:
-      - build
-  # This only runs on deploy tags and not branches
-  tagged-build:
+  build-test-deploy:
     jobs:
       - build:
-          filters:
+          filters:  # required since `test` has tag filters AND requires `build`
             tags:
-              only: /.*/
-      - deploy:
+              only: /^v.*/
+      - test:
           requires:
             - build
+          filters:  # required since `deploy` has tag filters AND requires `test`
+            tags:
+              only: /^v.*/
+      - deploy:
+          requires:
+            - test
           filters:
             tags:
-              only: /.*/
+              only: /^v.*/
             branches:
               ignore: /.*/
