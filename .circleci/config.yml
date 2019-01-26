@@ -1,3 +1,10 @@
+only-deploy-tags: &only-deploy-tags
+  filters:
+    tags:
+      only: /^v.*/
+    branches:
+      ignore: /.*/
+
 version: 2
 jobs:
   build:
@@ -21,17 +28,15 @@ jobs:
           command: echo Hello, world.
 workflows:
   version: 2
-  build-n-deploy:
+  # This runs on non-tag pushes
+  untagged-build:
     jobs:
-      - build:
-          filters:  # required since `deploy` has tag filters AND requires `build`
-            tags:
-              only: /.*/
+      - build
+  # This only runs on deploy tags and not branches
+  tagged-build:
+    jobs:
+      - build: *only-deploy-tags
       - deploy:
+          <<: *only-deploy-tags
           requires:
             - build
-          filters:
-            tags:
-              only: /^v.*/
-            branches:
-              ignore: /.*/
