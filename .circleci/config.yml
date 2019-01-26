@@ -21,16 +21,17 @@ jobs:
           command: echo Hello, world.
 workflows:
   version: 2
-  push_master:
+  build-n-deploy:
     jobs:
       - build:
-          filters:
-            branches:
-              only:
-                - master
-  push_tags:
-    jobs:
+          filters:  # required since `deploy` has tag filters AND requires `build`
+            tags:
+              only: /.*/
       - deploy:
+          requires:
+            - build
           filters:
             tags:
               only: /^v.*/
+            branches:
+              ignore: /.*/
