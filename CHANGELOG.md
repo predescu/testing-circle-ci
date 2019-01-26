@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="1.1.5"></a>
+## [1.1.5](https://github.com/predescu/testing-circle-ci/compare/v1.1.4...v1.1.5) (2019-01-26)
+
+
+### Bug Fixes
+
+* deploy step 2 ([afb11de](https://github.com/predescu/testing-circle-ci/commit/afb11de))
+
+
+
 <a name="1.1.4"></a>
 ## [1.1.4](https://github.com/predescu/testing-circle-ci/compare/v1.1.3...v1.1.4) (2019-01-26)
 
