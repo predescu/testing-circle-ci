@@ -20,3 +20,13 @@ workflows:
             branches:
               only:
                 - master
+  push_tags:
+    jobs:
+      - build:
+          filters:
+            # ignore any commit on any branch by default
+            branches:
+              ignore: /.*/
+            # only act on version tags
+            tags:
+              only: /^v\d+\.\d+\.\d+$/
