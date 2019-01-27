@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="1.3.0"></a>
+# [1.3.0](https://github.com/predescu/testing-circle-ci/compare/v1.2.6...v1.3.0) (2019-01-27)
+
+
+### Features
+
+* change docker image ([52fd68b](https://github.com/predescu/testing-circle-ci/commit/52fd68b))
+
+
+
 <a name="1.2.6"></a>
 ## [1.2.6](https://github.com/predescu/testing-circle-ci/compare/v1.2.5...v1.2.6) (2019-01-27)
 
