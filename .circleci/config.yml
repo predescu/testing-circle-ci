@@ -35,9 +35,13 @@ workflows:
           filters:
             tags:
               only: /.*/
+            branches:
+              ignore: /.*/
       - deploy:
           requires:
             - build
           filters:
             tags:
               only: /.*/
+            branches:
+              ignore: /.*/
