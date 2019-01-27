@@ -2,7 +2,7 @@ version: 2
 jobs:
   build:
     docker:
-      - image: debian:stretch
+      - image: predescu/serverless:latest
     steps:
       - checkout
       - run:
@@ -13,7 +13,7 @@ jobs:
           command: date
   test:
     docker:
-      - image: debian:stretch
+      - image: predescu/serverless:latest
     steps:
       - checkout
       - run:
@@ -21,7 +21,7 @@ jobs:
           command: echo Testing
   deploy:
     docker:
-      - image: debian:stretch
+      - image: predescu/serverless:latest
     steps:
       - checkout
       - run:
