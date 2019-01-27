@@ -34,14 +34,12 @@ workflows:
       - build:
           filters:
             tags:
-              only: /.*/
-            branches:
-              ignore: /.*/
+              only: '/.*/s'
       - deploy:
           requires:
             - build
           filters:
             tags:
-              only: /.*/
+              only: '/.*/s'
             branches:
               ignore: /.*/
