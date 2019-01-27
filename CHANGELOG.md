@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="1.2.4"></a>
+## [1.2.4](https://github.com/predescu/testing-circle-ci/compare/v1.2.3...v1.2.4) (2019-01-27)
+
+
+### Bug Fixes
+
+* ohh yeahh ([be2ef46](https://github.com/predescu/testing-circle-ci/commit/be2ef46))
+
+
+
 <a name="1.2.3"></a>
 ## [1.2.3](https://github.com/predescu/testing-circle-ci/compare/v1.2.2...v1.2.3) (2019-01-27)
 
